@@ -11,7 +11,7 @@ provider:
   memorySize: 256
   stage: ${opt:stage, 'dev'}
   environment: 
-    AUCTIONS_TABLE_NAME : ${self.custom.AuctionTable.name} 
+    AUCTIONS_TABLE_NAME: ${self:custom.AuctionsTable.name}
   iamRoleStatements:
     - ${file(iam/AuctionsTableIAM.yml):AuctionsTableIAM}
 
@@ -30,6 +30,6 @@ functions:
           path: /auction
 
 custom:
-  AuctionTable:  
+  AuctionsTable:
     name: !Ref AuctionsTable
     arn: !GetAtt AuctionsTable.Arn

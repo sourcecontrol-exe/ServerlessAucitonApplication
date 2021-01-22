@@ -1,4 +1,4 @@
-AuctionsTable :
+AuctionsTable:
       Type: AWS::DynamoDB::Table
       Properties:
         TableName: AuctionsTable-${self:provider.stage} 
