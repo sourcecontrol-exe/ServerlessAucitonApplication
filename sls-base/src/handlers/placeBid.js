@@ -17,7 +17,7 @@ async function placeBid(event, context) {
             ":amount": amount,
         },
         ReturnValues : 'ALL_NEW'
-    }
+    };
 
     let updatedAuction;
     try{
