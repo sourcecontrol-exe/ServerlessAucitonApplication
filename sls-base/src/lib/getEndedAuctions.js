@@ -8,7 +8,7 @@ export async  function getEndedAucitons(){
 
     const params = {
         TableName: process.env.AUCTIONS_TABLE_NAME,
-        IndexName: 'statusAndEndDate',
+        IndexName: 'statusAndendDate',
         KeyConditionExpression: '#status =:status AND endingAt <= :now',
         ExpressionAttributeValues: {
             ':status' :"OPEN",

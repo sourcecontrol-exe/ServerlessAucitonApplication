@@ -23,7 +23,7 @@ const generatePolicy = (principalId, methodArn) => {
 
 export async function handler(event, context) {
   if (!event.authorizationToken) {
-    throw 'Unauthorized';
+    throw 'NoAuthKey';
   }
 
   const token = event.authorizationToken.replace('Bearer ', '');
