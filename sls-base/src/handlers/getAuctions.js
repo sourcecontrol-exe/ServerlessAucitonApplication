@@ -8,8 +8,6 @@ const  dynamodb = new AWS.DynamoDB.DocumentClient();
 async function getAuctions(event, context) {
     let auctions;
     let {status} = event.queryStringParameters;
-    
-
     let params ={
       TableName:process.env.AUCTIONS_TABLE_NAME,
       IndexName: 'statusAndendDate',
